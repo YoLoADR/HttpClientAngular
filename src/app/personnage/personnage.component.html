@@ -1,0 +1,11 @@
+<h1>Tour des personnages</h1>
+<h3>Personnages :</h3>
+<ul>
+  <li *ngFor="let personnage of personnages">{{personnage.name}}</li>
+</ul>
+<!--#newPersonnageNom créer une variable coté view-->
+<label>Nouveau nom du personnage <input #newPersonnageNom/></label>
+<!--newPersonnageNom.value='' après la fonction d'ajout permet de réinitialiser l'input pour permettre d'ajout un nouveau personnage-->
+<button (click)="ajoutPersonnage(newPersonnageNom.value; newPersonnageNom.value='')">Ajout Personnage</button> 
+
+<p class="error" *ngIf="messageErreur">{{messageErreur}}</p>
